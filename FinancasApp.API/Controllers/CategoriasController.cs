@@ -25,9 +25,9 @@ namespace FinancasApp.API.Controllers
             try
             {
                 var usuarioId = Guid.Parse(User.Identity.Name);
-                var response = _categoriaDomainService.Criar(request,usuarioId);
+                var retorno = _categoriaDomainService.Criar(request,usuarioId);
 
-                return StatusCode(201, response);
+                return StatusCode(201, retorno);
             }
             catch (ApplicationException e)
             {
